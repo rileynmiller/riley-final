@@ -3,13 +3,18 @@
 {% block content %}
 <article class="container">
   <div class="row">
-    <div class="col-sm-4 left-rail">
-    <h2>{{ member.name }}</h2>
-
+    <div class="col-sm-4 left-content"> 
+      <img src="img/members/{{ members.imagebw }}" alt= "band member" class="img-fluid band-member">
     </div>
     <div class="col-sm-8">
-      {% block story %}{% endblock %}
-
+      <h2>{{ members.name }}</h2>
+      <ul class="members-info">
+        <li class="members-info">Instruments: {{ members.instruments }}</li>
+        <li class="members-info">Tenture: {{ members.tenure }}</li>
+        <li class="members-info">Birthplace: {{ members.birthplace }}</li>
+        <li class="members-info">Birthdate {{ members.birthdate }}</li>
+      </ul>
+      <p class="members-text">{{ members.text | safe}}</p>
     </div>
   </div>
 </article>
