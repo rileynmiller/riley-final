@@ -11,7 +11,9 @@
 </head>
 <body>
   {% include "_partials/nav.njk" %}
-
+  {% block jumbo %}
+  {% include "_partials/jumbotron.njk" %}
+  {% endblock %}
   {% block content %}{% endblock %}
 
   {% include "_partials/footer.njk" %}

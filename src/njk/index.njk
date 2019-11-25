@@ -1,6 +1,8 @@
 {% extends '_layouts/base.njk' %}
 
-{% block page_title %}New index page title{% endblock %}
+{% block page_title %}Queen{% endblock %}
+
+{% block jumbo %}{% endblock %}
 
 {% block content %}
 
@@ -17,13 +19,18 @@
       <p>
         Lucas ipsum dolor <a href="detail-book-example.html">link to book page example</a> amidala sith dooku solo moff organa obi-wan windu. Gamorrean binks wedge darth. Mon darth mon kit ponda solo. Moff watto ackbar mothma moff anakin. Lando skywalker lars fett calrissian lars organa. Organa kenobi wedge darth jawa skywalker anakin. Twi'lek kit darth calamari lando kamino droid. Darth jawa fett grievous maul. Palpatine obi-wan leia tusken raider dagobah. Twi'lek qui-gon boba antilles yoda thrawn. Wampa luuke wampa skywalker. Moff ponda ackbar dagobah kit lobot jinn solo.
       </p>
-      <ul> 
-        {% for book in data.books %}
-          <li>{{ book.title }}, {{ book.author }}</li>
-        {% else %}
-          <li>This would display if the 'books' collection were empty</li>
-        {% endfor %}
-     </ul>
+  <div class="row">
+  {% for member in data.members %}
+  <div class="col-sm-6 col-lg-3">
+    <div class="card">
+    <img class="card-img-top" src="img/members/{{ member.image }}" alt="band member" class="img-fluid">
+      <div class="card-body">
+        <h5 class="card-title">{{ member.name }}</h5>
+        <a class="card-link btn" href="{{ member.slug }}.html">About<a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}  
     </div>
   </div>
 </div>
