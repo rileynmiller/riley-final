@@ -5,6 +5,7 @@
 {% block content %}
 
 <div>
+  <div class="container">
   <h2>Music</h2>
  <div class="row">
  {% for disc in data.discography %}
@@ -13,7 +14,8 @@
       <p class="album-title album-year text-center">{{ disc.title }} – {{ disc.year }}</p>
     </div>
 {% endfor %}
+  </div>
 </div>
-  
+
 
 {% endblock %}
