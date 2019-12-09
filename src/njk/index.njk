@@ -2,16 +2,12 @@
 
 {% block page_title %}Queen{% endblock %}
 
-{% block jumbo %}{% endblock %}
-
 {% block content %}
 
 <div class="container">
   <div class="row">
     <div class="col">
-    <h1>Queen</h1>
-    <p class="author">By Obi-Wan Kenobi</p>
-    <p class="date"> Published May 25, 1977</p>
+    <h1>MEET QUEEN</h1>
     </div>
   </div>
   <div class="row">
@@ -23,7 +19,7 @@
   {% for member in data.members %}
   <div class="col-sm-6 col-lg-3">
     <div class="card">
-    <img class="card-img-top" src="img/members/{{ member.image }}" alt="band member" class="img-fluid">
+    <img class="card-img-top" src="img/members/{{ member.imagebw }}" alt="band member" class="img-fluid">
       <div class="card-body">
         <h5 class="card-title">{{ member.name }}</h5>
         <a class="card-link btn" href="{{ member.slug }}.html">About<a>
